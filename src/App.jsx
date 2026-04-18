@@ -12,6 +12,7 @@ const IncorporationPage = lazy(() => import('./pages/IncorporationPage'));
 const LoansPage        = lazy(() => import('./pages/LoansPage'));
 const ContactPage      = lazy(() => import('./pages/ContactPage'));
 const PricingPage      = lazy(() => import('./pages/PricingPage'));
+const TaxCalculatorPage = lazy(() => import('./pages/TaxCalculatorPage'));
 const NotFoundPage     = lazy(() => import('./pages/NotFoundPage'));
 
 export default function App() {
@@ -59,6 +60,7 @@ export default function App() {
 
               <Route path="contact" element={<ContactPage />} />
               <Route path="pricing" element={<PricingPage />} />
+              <Route path="tax-calculator" element={<TaxCalculatorPage />} />
               <Route path="*"       element={<NotFoundPage />} />
             </Route>
           </Routes>

@@ -75,7 +75,9 @@ export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false);
   const [menuOpen,  setMenuOpen]  = useState(false);
   const [megaOpen,  setMegaOpen]  = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const megaRef = useRef(null);
+  const resourcesRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -84,11 +86,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
-  useEffect(() => { setMenuOpen(false); setMegaOpen(false); }, [location]);
+  useEffect(() => { setMenuOpen(false); setMegaOpen(false); setResourcesOpen(false); }, [location]);
 
   useEffect(() => {
     const fn = (e) => {
       if (megaRef.current && !megaRef.current.contains(e.target)) setMegaOpen(false);
+      if (resourcesRef.current && !resourcesRef.current.contains(e.target)) setResourcesOpen(false);
     };
     document.addEventListener('mousedown', fn);
     return () => document.removeEventListener('mousedown', fn);
@@ -147,18 +150,6 @@ export default function Navbar() {
               </motion.svg>
             </button>
 
-            <NavLink to="/pricing" className={({ isActive }) =>
-              `nav-link ${isActive ? 'nav-link-active' : ''}`
-            }>
-              Plans &amp; Pricing
-            </NavLink>
-
-            <NavLink to="/contact" className={({ isActive }) =>
-              `nav-link ${isActive ? 'nav-link-active' : ''}`
-            }>
-              Contact
-            </NavLink>
-
             {/* ── Mega-menu ── */}
             <AnimatePresence>
               {megaOpen && (
@@ -210,6 +201,65 @@ export default function Navbar() {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            <NavLink to="/pricing" className={({ isActive }) =>
+              `nav-link ${isActive ? 'nav-link-active' : ''}`
+            }>
+              Plans &amp; Pricing
+            </NavLink>
+
+            {/* Resources trigger */}
+            <div className="relative" ref={resourcesRef}>
+              <button
+                onClick={() => setResourcesOpen(!resourcesOpen)}
+                aria-haspopup="true"
+                aria-expanded={resourcesOpen}
+                className={`nav-link flex items-center gap-1 focus:outline-none ${resourcesOpen ? 'nav-link-active' : ''}`}
+              >
+                Resources
+                <motion.svg
+                  animate={{ rotate: resourcesOpen ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-4 h-4 text-slate-400"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </motion.svg>
+              </button>
+
+              <AnimatePresence>
+                {resourcesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 6 }}
+                    transition={{ duration: 0.18 }}
+                    className="absolute top-full right-0 mt-2 w-64 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden z-50"
+                    style={{ boxShadow: '0 20px 60px -12px rgb(0 0 0 / 0.12)' }}
+                    role="menu"
+                    aria-label="Resources menu"
+                  >
+                    <div className="p-2">
+                      <Link to="/tax-calculator" className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors group" role="menuitem">
+                        <div className="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg flex-shrink-0">
+                          🧮
+                        </div>
+                        <div>
+                          <p className="font-semibold text-slate-900 text-sm group-hover:text-brand-700 transition-colors">Tax Calculator</p>
+                          <p className="text-slate-500 text-xs mt-0.5">Old vs New Regime (FY 24-25)</p>
+                        </div>
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <NavLink to="/contact" className={({ isActive }) =>
+              `nav-link ${isActive ? 'nav-link-active' : ''}`
+            }>
+              Contact
+            </NavLink>
           </div>
 
           {/* ── Right actions ── */}
@@ -268,6 +318,15 @@ export default function Navbar() {
                 ))}
               </div>
               <NavLink to="/pricing" className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Plans &amp; Pricing</NavLink>
+              
+              <div className="pt-2 pb-1">
+                <p className="px-3 text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Resources</p>
+                <Link to="/tax-calculator" className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-brand-50 transition-colors">
+                  <div className="w-8 h-8 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm">🧮</div>
+                  <span className="text-slate-700 font-medium text-sm">Tax Calculator</span>
+                </Link>
+              </div>
+
               <NavLink to="/contact" className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Contact</NavLink>
               <div className="pt-3">
                 <Link to="/contact" className="btn-cta w-full justify-center" aria-label="Get free consultation">
