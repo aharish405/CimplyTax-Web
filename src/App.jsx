@@ -11,6 +11,7 @@ const GSTPage          = lazy(() => import('./pages/GSTPage'));
 const IncorporationPage = lazy(() => import('./pages/IncorporationPage'));
 const LoansPage        = lazy(() => import('./pages/LoansPage'));
 const ContactPage      = lazy(() => import('./pages/ContactPage'));
+const PricingPage      = lazy(() => import('./pages/PricingPage'));
 const NotFoundPage     = lazy(() => import('./pages/NotFoundPage'));
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
               </Route>
 
               <Route path="contact" element={<ContactPage />} />
+              <Route path="pricing" element={<PricingPage />} />
               <Route path="*"       element={<NotFoundPage />} />
             </Route>
           </Routes>

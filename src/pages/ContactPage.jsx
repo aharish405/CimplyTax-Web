@@ -7,7 +7,7 @@ export default function ContactPage() {
     <>
       <SEO title="Contact Us — Free Tax & GST Consultation" description="Reach CimplyTax experts for ITR, GST, Company Registration, and Loan advisory. Call, WhatsApp, or fill the form for a free consultation." canonical="/contact" />
 
-      <section className="relative bg-white overflow-hidden py-20 lg:py-28 min-h-[90vh]">
+      <section className="relative bg-white overflow-hidden py-16 lg:py-20 min-h-[90vh]">
         <div className="absolute inset-0 bg-dot-grid opacity-50 pointer-events-none" />
         <div className="absolute -top-32 left-1/3 w-96 h-96 bg-brand-50 rounded-full blur-3xl opacity-80 pointer-events-none" />
         <div className="relative container-xl px-4 sm:px-6 lg:px-8">

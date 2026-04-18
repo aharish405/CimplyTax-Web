@@ -54,7 +54,7 @@ export default function LoansPage({ tab: defaultTab }) {
       <SEO title="Personal, Home & Business Loan Advisory India" description="CimplyTax helps you get the best loan deals — Personal, Home, Business, and LAP — with quick approvals and minimal documentation. Free eligibility check." canonical="/loans" />
 
       {/* HERO */}
-      <section className="relative bg-white overflow-hidden py-20 lg:py-28">
+      <section className="relative bg-white overflow-hidden py-16 lg:py-20">
         <div className="absolute inset-0 bg-dot-grid opacity-50 pointer-events-none" />
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-80 pointer-events-none" />
         <div className="relative container-xl px-4 sm:px-6 lg:px-8">

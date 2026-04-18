@@ -37,8 +37,8 @@
 
   /* ── Layout ── */
   .container-xl  { @apply max-w-7xl mx-auto; }
-  .section-pad   { @apply py-24 px-4 sm:px-6 lg:px-8; }
-  .section-pad-sm{ @apply py-16 px-4 sm:px-6 lg:px-8; }
+  .section-pad   { @apply py-16 lg:py-20 px-4 sm:px-6 lg:px-8; }
+  .section-pad-sm{ @apply py-12 lg:py-16 px-4 sm:px-6 lg:px-8; }
 
   /* ── Typography ── */
   .eyebrow {
@@ -150,12 +150,12 @@
   }
 
   /* ── Section header ── */
-  .section-header { @apply max-w-2xl mb-16; }
-  .section-header-center { @apply max-w-2xl mx-auto text-center mb-16; }
+  .section-header { @apply max-w-2xl mb-12; }
+  .section-header-center { @apply max-w-2xl mx-auto text-center mb-12; }
 
   /* ── Zig-zag ── */
   .zigzag-section {
-    @apply grid lg:grid-cols-2 gap-16 items-center py-20;
+    @apply grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-20;
   }
 
   /* ── Divider ── */

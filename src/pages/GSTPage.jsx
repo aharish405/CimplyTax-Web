@@ -27,7 +27,7 @@ export default function GSTPage() {
     <>
       <SEO title="GST Registration & Filing Services India" description="CimplyTax offers expert GST registration, GSTR filing, reconciliation, and advisory for all businesses. Authorized GSTP. From ₹499." canonical="/gst" />
 
-      <section className="relative bg-white overflow-hidden py-20 lg:py-28">
+      <section className="relative bg-white overflow-hidden py-16 lg:py-20">
         <div className="absolute inset-0 bg-dot-grid opacity-50 pointer-events-none" />
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-teal-50 rounded-full blur-3xl opacity-80 pointer-events-none" />
         <div className="relative container-xl px-4 sm:px-6 lg:px-8">

@@ -147,6 +147,12 @@ export default function Navbar() {
               </motion.svg>
             </button>
 
+            <NavLink to="/pricing" className={({ isActive }) =>
+              `nav-link ${isActive ? 'nav-link-active' : ''}`
+            }>
+              Plans &amp; Pricing
+            </NavLink>
+
             <NavLink to="/contact" className={({ isActive }) =>
               `nav-link ${isActive ? 'nav-link-active' : ''}`
             }>
@@ -261,6 +267,7 @@ export default function Navbar() {
                   </Link>
                 ))}
               </div>
+              <NavLink to="/pricing" className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Plans &amp; Pricing</NavLink>
               <NavLink to="/contact" className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Contact</NavLink>
               <div className="pt-3">
                 <Link to="/contact" className="btn-cta w-full justify-center" aria-label="Get free consultation">
