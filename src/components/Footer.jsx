@@ -96,8 +96,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center">
-                <span className="text-white font-extrabold text-sm">CT</span>
+              <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+                <img src="/images/logo.png" alt="CimplyTax logo" className="w-7 h-7 object-contain" draggable={false} />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight">
                 Cimply<span className="text-brand-400">Tax</span>

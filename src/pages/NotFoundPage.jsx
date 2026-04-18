@@ -7,8 +7,8 @@ export default function NotFoundPage() {
       <SEO title="Page Not Found" description="The page you're looking for doesn't exist." />
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
         <div className="text-center max-w-md">
-          <div className="w-20 h-20 rounded-3xl bg-brand-600 flex items-center justify-center mx-auto mb-8 shadow-brand">
-            <span className="text-white font-extrabold text-2xl">CT</span>
+          <div className="w-20 h-20 rounded-lg bg-white border border-slate-200 flex items-center justify-center mx-auto mb-8 shadow-sm">
+            <img src="/images/logo.png" alt="CimplyTax logo" className="w-14 h-14 object-contain" />
           </div>
           <h1 className="text-8xl font-extrabold text-slate-900 mb-4">404</h1>
           <p className="text-2xl font-bold text-slate-700 mb-3">Page Not Found</p>

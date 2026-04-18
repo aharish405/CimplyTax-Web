@@ -108,8 +108,13 @@ export default function Navbar() {
 
           {/* ── Logo ── */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group" aria-label="CimplyTax Home">
-            <div className="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center shadow-sm group-hover:bg-brand-500 transition-colors">
-              <span className="text-white font-extrabold text-sm tracking-tight">CT</span>
+            <div className="w-9 h-9 rounded-lg bg-white border border-slate-100 flex items-center justify-center overflow-hidden shadow-sm group-hover:shadow transition-shadow">
+              <img
+                src="/images/logo.png"
+                alt="CimplyTax logo"
+                className="w-7 h-7 object-contain"
+                draggable={false}
+              />
             </div>
             <span className="font-extrabold text-[17px] text-slate-900 tracking-tight">
               Cimply<span className="text-brand-600">Tax</span>

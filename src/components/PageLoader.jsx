@@ -2,8 +2,8 @@ export default function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50" role="status" aria-label="Loading page">
       <div className="flex flex-col items-center gap-4">
-        <div className="w-14 h-14 rounded-2xl bg-brand-600 flex items-center justify-center shadow-lg">
-          <span className="text-white font-extrabold text-lg">CT</span>
+        <div className="w-14 h-14 rounded-lg bg-white border border-slate-200 flex items-center justify-center shadow-sm">
+          <img src="/images/logo.png" alt="CimplyTax" className="w-10 h-10 object-contain" />
         </div>
         <div className="flex gap-1.5">
           {[0, 1, 2].map((i) => (
