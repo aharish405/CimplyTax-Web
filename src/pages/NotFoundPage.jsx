@@ -1,26 +1,23 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 
 export default function NotFoundPage() {
   return (
     <>
-      <SEO title="404 — Page Not Found" description="This page doesn't exist." noIndex />
-      <section className="min-h-screen flex items-center justify-center px-4 bg-slate-950">
-        <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center"
-        >
-          <div className="text-8xl font-bold font-display gradient-text mb-4">404</div>
-          <h1 className="text-2xl font-bold text-white mb-4">Page Not Found</h1>
-          <p className="text-slate-400 mb-8 max-w-sm mx-auto">
-            The page you're looking for doesn't exist or has been moved.
-          </p>
-          <Link to="/" className="btn-primary" aria-label="Return to CimplyTax homepage">
-            ← Back to Home
-          </Link>
-        </motion.div>
+      <SEO title="Page Not Found" description="The page you're looking for doesn't exist." />
+      <section className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+        <div className="text-center max-w-md">
+          <div className="w-20 h-20 rounded-3xl bg-brand-600 flex items-center justify-center mx-auto mb-8 shadow-brand">
+            <span className="text-white font-extrabold text-2xl">CT</span>
+          </div>
+          <h1 className="text-8xl font-extrabold text-slate-900 mb-4">404</h1>
+          <p className="text-2xl font-bold text-slate-700 mb-3">Page Not Found</p>
+          <p className="text-slate-500 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link to="/" className="btn-primary">← Back to Home</Link>
+            <Link to="/contact" className="btn-outline">Contact Us</Link>
+          </div>
+        </div>
       </section>
     </>
   );

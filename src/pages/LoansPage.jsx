@@ -16,76 +16,32 @@ function FadeUp({ children, delay = 0, className = '' }) {
 
 const loanTabs = [
   {
-    id: 'personal',
-    label: 'Personal Loan',
-    icon: '👤',
+    id: 'personal', label: 'Personal Loan', icon: '👤',
     headline: 'Personal Loans up to ₹50 Lakh',
-    desc: 'Get funds for any personal need — medical, travel, wedding, or renovation — with minimal documentation and quick approval.',
-    rate: '10.5% – 24% p.a.',
-    tenure: 'Up to 60 months',
-    amount: 'Up to ₹50 Lakh',
-    eligibility: [
-      'Indian citizen aged 21–60 years',
-      'Minimum monthly income ₹20,000',
-      'Credit score of 700+ preferred',
-      'Minimum 1 year of employment (salaried)',
-      'PAN and Aadhaar mandatory',
-      'Bank statements (last 3 months)',
-    ],
+    rate: '10.5% – 24% p.a.', tenure: 'Up to 60 months', amount: 'Up to ₹50 Lakh',
+    desc: 'Get funds for any personal need — medical, travel, wedding, or home renovation — with minimal documentation.',
+    eligibility: ['Indian citizen aged 21–60 years', 'Minimum monthly income ₹20,000', 'Credit score 700+ preferred', 'Minimum 1 year of employment', 'PAN and Aadhaar mandatory'],
   },
   {
-    id: 'home',
-    label: 'Home Loan',
-    icon: '🏠',
-    headline: 'Home Loans Starting at 8.5% p.a.',
-    desc: 'Fulfill your dream of owning a home with competitive interest rates, long tenures, and doorstep assistance.',
-    rate: '8.5% – 12% p.a.',
-    tenure: 'Up to 30 years',
-    amount: 'Up to ₹10 Crore',
-    eligibility: [
-      'Salaried or self-employed Indian resident',
-      'Age 23–65 years at loan maturity',
-      'Minimum income ₹30,000/month',
-      'Property should be legally clear',
-      'Credit score 720+ recommended',
-      'ITR for last 2 years (self-employed)',
-    ],
+    id: 'home', label: 'Home Loan', icon: '🏠',
+    headline: 'Home Loans from 8.5% p.a.',
+    rate: '8.5% – 12% p.a.', tenure: 'Up to 30 years', amount: 'Up to ₹10 Crore',
+    desc: 'Fulfill your dream home with competitive rates, long tenures, and doorstep processing assistance.',
+    eligibility: ['Salaried or self-employed resident', 'Age 23–65 at loan maturity', 'Minimum income ₹30,000/month', 'Credit score 720+ recommended', 'ITR for last 2 years (self-employed)'],
   },
   {
-    id: 'business',
-    label: 'Business Loan',
-    icon: '💼',
+    id: 'business', label: 'Business Loan', icon: '💼',
     headline: 'Business Loans for Growth',
-    desc: 'Scale your operations with flexible business loans from top banks. Working capital, machinery, or expansion — we finance it all.',
-    rate: '12% – 22% p.a.',
-    tenure: 'Up to 84 months',
-    amount: 'Up to ₹5 Crore',
-    eligibility: [
-      'Business operational for at least 2 years',
-      'Annual turnover ₹15 Lakh+',
-      'ITR filings for last 2 years',
-      'GST returns (if registered)',
-      'Business & personal bank statements',
-      'Credit score 700+ preferred',
-    ],
+    rate: '12% – 22% p.a.', tenure: 'Up to 84 months', amount: 'Up to ₹5 Crore',
+    desc: 'Scale operations with flexible loans. Working capital, machinery, or expansion — we finance it all.',
+    eligibility: ['Business operational minimum 2 years', 'Annual turnover ₹15 Lakh+', 'ITR filings for last 2 years', 'GST returns (if registered)', 'Credit score 700+ preferred'],
   },
   {
-    id: 'lap',
-    label: 'Loan Against Property',
-    icon: '🏗️',
-    headline: 'Unlock the Value of Your Property',
-    desc: 'Mortgage your residential or commercial property to get large-ticket funding at lower interest rates for any business need.',
-    rate: '9% – 16% p.a.',
-    tenure: 'Up to 15 years',
-    amount: 'Up to ₹20 Crore',
-    eligibility: [
-      'Clear title property (residential or commercial)',
-      'Age 25–70 years',
-      'Loan to value ratio up to 70%',
-      'Minimum annual income ₹3 Lakh',
-      'ITR for last 2–3 years',
-      'No overdue on existing loans',
-    ],
+    id: 'lap', label: 'Loan Against Property', icon: '🏗️',
+    headline: 'Unlock Your Property Value',
+    rate: '9% – 16% p.a.', tenure: 'Up to 15 years', amount: 'Up to ₹20 Crore',
+    desc: 'Mortgage residential or commercial property for large-ticket funding at lower interest rates.',
+    eligibility: ['Clear title property (residential or commercial)', 'Age 25–70 years', 'Loan-to-value ratio up to 70%', 'Minimum annual income ₹3 Lakh', 'No overdue on existing loans'],
   },
 ];
 
@@ -98,49 +54,58 @@ export default function LoansPage({ tab: defaultTab }) {
       <SEO title="Personal, Home & Business Loan Advisory India" description="CimplyTax helps you get the best loan deals — Personal, Home, Business, and LAP — with quick approvals and minimal documentation. Free eligibility check." canonical="/loans" />
 
       {/* HERO */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-navy-950 to-slate-950" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-40" />
+      <section className="relative bg-white overflow-hidden py-20 lg:py-28">
+        <div className="absolute inset-0 bg-dot-grid opacity-50 pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-80 pointer-events-none" />
         <div className="relative container-xl px-4 sm:px-6 lg:px-8">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="badge-trust mb-4 inline-flex">Loan Services</motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-4xl lg:text-5xl font-bold font-display text-white mb-5 mt-2">
-            Smart Loan Advisory for{' '}
-            <span className="gradient-text">Every Need</span>
-          </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
-            className="text-slate-400 text-lg mb-8 max-w-xl">
-            We compare 50+ lenders to find you the best rates with minimal paperwork and fastest disbursal.
-          </motion.p>
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            <div>
+              <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+                <span className="eyebrow">Loan Advisory</span>
+              </motion.div>
+              <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                className="text-5xl lg:text-6xl font-extrabold text-slate-900 mt-4 mb-5 leading-tight text-balance">
+                Smart Loans for <span className="gradient-brand">Every Life Goal</span>
+              </motion.h1>
+              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
+                className="body-lg mb-8 max-w-lg">
+                We compare 50+ lenders to find you the best rates with minimal paperwork and fastest disbursal — for any personal or business need.
+              </motion.p>
+              <div className="flex flex-wrap gap-3">
+                <a href="#loan-tabs" className="btn-primary">Check Eligibility →</a>
+                <a href="tel:+918000000000" className="btn-outline">📞 Free Advisory</a>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(5 150 105 / 0.15)' }}>
+                <img src="/images/loans-family.png" alt="Happy Indian family celebrating home loan approval"
+                  className="w-full h-[440px] object-cover" width={580} height={440} />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* TABBED INTERFACE */}
-      <section className="section-padding" aria-labelledby="loans-heading">
-        <div className="container-xl">
-          <FadeUp className="text-center mb-10">
-            <h2 id="loans-heading" className="section-title">
-              Choose Your <span className="gradient-text">Loan Type</span>
-            </h2>
+      <section className="section-pad bg-slate-50" id="loan-tabs" aria-labelledby="loans-heading">
+        <div className="container-xl px-4 sm:px-6 lg:px-8">
+          <FadeUp className="section-header-center">
+            <span className="eyebrow">Loan Types</span>
+            <h2 id="loans-heading" className="h-section mb-4">Choose Your <span className="gradient-brand">Loan Type</span></h2>
           </FadeUp>
 
           {/* Tab buttons */}
           <FadeUp delay={0.05}>
             <div className="flex flex-wrap gap-3 justify-center mb-10" role="tablist" aria-label="Loan types">
               {loanTabs.map((t) => (
-                <button
-                  key={t.id}
-                  role="tab"
-                  id={`tab-${t.id}`}
-                  aria-selected={activeTab === t.id}
+                <button key={t.id} role="tab" id={`tab-${t.id}`} aria-selected={activeTab === t.id}
                   aria-controls={`panel-${t.id}`}
                   onClick={() => setActiveTab(t.id)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200
+                  className={`flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 border-2
                     ${activeTab === t.id
-                      ? 'bg-trust-700 text-white shadow-lg shadow-trust-900/40'
-                      : 'bg-slate-800/60 text-slate-400 hover:bg-slate-700 hover:text-white border border-slate-700'
-                    }`}
-                >
+                      ? 'bg-brand-600 text-white border-brand-600 shadow-brand'
+                      : 'bg-white text-slate-700 border-slate-200 hover:border-brand-300 hover:text-brand-700'
+                    }`}>
                   <span>{t.icon}</span> {t.label}
                 </button>
               ))}
@@ -149,61 +114,46 @@ export default function LoansPage({ tab: defaultTab }) {
 
           {/* Tab panel */}
           <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              id={`panel-${activeTab}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${activeTab}`}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3 }}
-            >
+            <motion.div key={activeTab} id={`panel-${activeTab}`} role="tabpanel" aria-labelledby={`tab-${activeTab}`}
+              initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.28 }}>
               <div className="grid lg:grid-cols-2 gap-10 items-start">
-                {/* Left: info */}
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{tab.icon}</span>
-                    <h3 className="text-2xl font-bold font-display text-white">{tab.headline}</h3>
+                    <span className="text-3xl">{tab.icon}</span>
+                    <h3 className="text-2xl font-extrabold text-slate-900">{tab.headline}</h3>
                   </div>
-                  <p className="text-slate-400 mb-6 leading-relaxed">{tab.desc}</p>
-
-                  {/* Quick stats */}
+                  <p className="text-slate-600 mb-6 leading-relaxed">{tab.desc}</p>
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     {[
                       { label: 'Interest Rate', value: tab.rate },
                       { label: 'Loan Amount',   value: tab.amount },
                       { label: 'Tenure',         value: tab.tenure },
                     ].map((s) => (
-                      <div key={s.label} className="card p-4 text-center">
-                        <p className="text-white font-bold font-display text-sm">{s.value}</p>
+                      <div key={s.label} className="card-flat p-4 text-center">
+                        <p className="font-bold text-brand-600 text-sm">{s.value}</p>
                         <p className="text-slate-500 text-xs mt-1">{s.label}</p>
                       </div>
                     ))}
                   </div>
-
-                  {/* Eligibility checklist */}
                   <div className="card p-6">
-                    <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
-                      <svg className="w-5 h-5 text-trust-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                      <svg className="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                       </svg>
                       Quick Eligibility Checklist
                     </h4>
                     <ul className="space-y-2.5">
                       {tab.eligibility.map((e) => (
-                        <li key={e} className="flex items-start gap-2.5 text-sm">
-                          <svg className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <li key={e} className="flex items-center gap-2.5 text-sm text-slate-600">
+                          <svg className="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span className="text-slate-300">{e}</span>
+                          {e}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-
-                {/* Right: lead form */}
                 <LeadForm title={`Apply for ${tab.label}`} compact />
               </div>
             </motion.div>

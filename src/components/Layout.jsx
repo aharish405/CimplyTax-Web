@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import WhatsAppButton from './WhatsAppButton';
 
-// Scroll to top on every route change
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [pathname]);
@@ -13,10 +12,10 @@ function ScrollToTop() {
 
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <ScrollToTop />
       <Navbar />
-      <main id="main-content" className="flex-1 pt-16 lg:pt-18" role="main">
+      <main id="main-content" className="flex-1 pt-[68px]" role="main">
         <Outlet />
       </main>
       <Footer />
