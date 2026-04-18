@@ -77,7 +77,7 @@ export default function LoansPage({ tab: defaultTab }) {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(5 150 105 / 0.15)' }}>
+              <div className="rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 12px 40px -8px rgb(5 150 105 / 0.12)' }}>
                 <img src="/images/loans-family.png" alt="Happy Indian family celebrating home loan approval"
                   className="w-full h-[440px] object-cover" width={580} height={440} />
               </div>

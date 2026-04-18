@@ -201,7 +201,7 @@ export default function IncomeTaxPage() {
 
             {/* Right image */}
             <FadeLeft delay={0.15} className="hidden lg:block">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(37 99 235 / 0.15)' }}>
+              <div className="relative rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 12px 40px -8px rgb(37 99 235 / 0.12)' }}>
                 <img
                   src="/images/tax-advisor.png"
                   alt="CimplyTax CA tax advisor consulting a client"
@@ -229,7 +229,7 @@ export default function IncomeTaxPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {plans.map((plan, i) => (
               <FadeUp key={plan.tier} delay={i * 0.1}>
-                <div className={`relative flex flex-col h-full rounded-3xl border-2
+                <div className={`relative flex flex-col h-full rounded-xl border-2
                   ${plan.featured
                     ? 'border-brand-600 bg-brand-600 shadow-brand'
                     : 'border-slate-100 bg-white shadow-card hover:shadow-card-hover'
@@ -306,7 +306,7 @@ export default function IncomeTaxPage() {
               <img
                 src="/images/tax-advisor.png"
                 alt="CA advisor discussing tax documents with client"
-                className="w-full h-64 object-cover rounded-3xl shadow-lg mb-8"
+                className="w-full h-64 object-cover rounded-xl shadow-md mb-8"
                 loading="lazy"
               />
               <span className="eyebrow">Document Checklist</span>

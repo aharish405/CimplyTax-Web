@@ -42,11 +42,11 @@ export default function LeadForm({ title = 'Talk to a CA Advisor', compact = fal
   };
 
   const wrapCls = bordered
-    ? 'bg-white border border-slate-200 rounded-3xl p-8 lg:p-10'
-    : 'bg-white rounded-3xl p-8 lg:p-10';
+    ? 'bg-white border border-slate-200 rounded-xl p-8 lg:p-10'
+    : 'bg-white rounded-xl p-8 lg:p-10';
 
   return (
-    <div className={wrapCls} style={{ boxShadow: bordered ? '0 4px 32px -4px rgb(0 0 0 / 0.10)' : 'none' }}>
+    <div className={wrapCls} style={{ boxShadow: bordered ? '0 2px 16px -4px rgb(0 0 0 / 0.08)' : 'none' }}>
       <AnimatePresence mode="wait">
         {success ? (
           <motion.div

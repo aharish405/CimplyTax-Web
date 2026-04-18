@@ -210,7 +210,7 @@ export default function HomePage() {
             {/* Right: AI image + floating lead form */}
             <FadeLeft delay={0.15} className="relative hidden lg:block">
               {/* Main hero image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(37 99 235 / 0.18), 0 8px 32px -4px rgb(0 0 0 / 0.1)' }}>
+              <div className="relative rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 12px 40px -8px rgb(37 99 235 / 0.14), 0 4px 16px -4px rgb(0 0 0 / 0.08)' }}>
                 <img
                   src="/images/hero-professionals.png"
                   alt="CimplyTax professionals in a modern Mumbai office"
@@ -227,10 +227,10 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20, scale: 0.92 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.55, duration: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-slate-100 flex items-center gap-4"
+                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-md border border-slate-200 flex items-center gap-4"
                 style={{ boxShadow: '0 8px 32px -4px rgb(0 0 0 / 0.12)' }}
               >
-                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center text-2xl flex-shrink-0">✅</div>
+                <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-xl flex-shrink-0">✅</div>
                 <div>
                   <p className="font-extrabold text-slate-900 text-xl">10,000+</p>
                   <p className="text-slate-500 text-xs">Happy clients served</p>
@@ -242,7 +242,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: -16, scale: 0.92 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.65, duration: 0.5 }}
-                className="absolute -top-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-slate-100"
+                className="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-md border border-slate-200"
                 style={{ boxShadow: '0 8px 32px -4px rgb(0 0 0 / 0.12)' }}
               >
                 <div className="flex gap-0.5 mb-1">
@@ -361,7 +361,7 @@ export default function HomePage() {
             {/* Right: AI image */}
             <FadeLeft delay={0.1}>
               <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 24px 64px -8px rgb(0 0 0 / 0.12)' }}>
+                <div className="rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 8px 32px -6px rgb(0 0 0 / 0.09)' }}>
                   <img
                     src="/images/tax-advisor.png"
                     alt="CimplyTax Chartered Accountant consulting a client on income tax filing"
@@ -372,8 +372,8 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Floating badge */}
-                <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl p-4 shadow-lg border border-slate-100 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">CA</div>
+                <div className="absolute -bottom-5 -right-5 bg-white rounded-xl p-4 shadow-md border border-slate-200 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-md bg-brand-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">CA</div>
                   <div>
                     <p className="font-bold text-slate-900 text-sm">CA-Reviewed Filing</p>
                     <p className="text-slate-500 text-xs">Every return signed by a CA</p>
@@ -394,7 +394,7 @@ export default function HomePage() {
             {/* Left: AI image */}
             <FadeUp>
               <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 24px 64px -8px rgb(0 0 0 / 0.12)' }}>
+                <div className="rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 8px 32px -6px rgb(0 0 0 / 0.09)' }}>
                   <img
                     src="/images/loans-family.png"
                     alt="Happy Indian family celebrating home loan approval in front of their new apartment"
@@ -405,7 +405,7 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Floating rate badge */}
-                <div className="absolute -top-5 -left-5 bg-white rounded-2xl p-4 shadow-lg border border-slate-100">
+                <div className="absolute -top-5 -left-5 bg-white rounded-xl p-4 shadow-md border border-slate-200">
                   <p className="text-xs text-slate-500 mb-0.5">Home Loan Rates from</p>
                   <p className="text-2xl font-extrabold text-brand-600">8.5% p.a.</p>
                 </div>

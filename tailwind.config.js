@@ -59,9 +59,13 @@ export default {
         'teal':  '0 4px 24px -4px rgb(13 148 136 / 0.35)',
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-        '4xl': '2rem',
+        'sm':   '4px',
+        DEFAULT: '6px',
+        'md':   '8px',
+        'lg':   '10px',
+        'xl':   '12px',
+        '2xl':  '14px',
+        '3xl':  '16px',
       },
       animation: {
         'fade-up':    'fadeUp 0.6s ease-out forwards',

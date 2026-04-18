@@ -108,7 +108,7 @@ export default function Navbar() {
 
           {/* ── Logo ── */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group" aria-label="CimplyTax Home">
-            <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center shadow-sm group-hover:bg-brand-500 transition-colors">
+            <div className="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center shadow-sm group-hover:bg-brand-500 transition-colors">
               <span className="text-white font-extrabold text-sm tracking-tight">CT</span>
             </div>
             <span className="font-extrabold text-[17px] text-slate-900 tracking-tight">
@@ -246,17 +246,17 @@ export default function Navbar() {
             className="lg:hidden bg-white border-t border-slate-100 overflow-hidden shadow-lg"
           >
             <div className="px-4 py-6 space-y-1">
-              <NavLink to="/" end className="block px-3 py-2.5 rounded-xl text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Home</NavLink>
+              <NavLink to="/" end className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Home</NavLink>
               <div className="pt-2 pb-1">
                 <p className="px-3 text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Services</p>
                 {services.map((svc) => (
-                  <Link key={svc.label} to={svc.href} className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors">
-                    <div className={`w-8 h-8 rounded-lg ${svc.color} flex items-center justify-center text-sm`}>{svc.icon}</div>
+                  <Link key={svc.label} to={svc.href} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-brand-50 transition-colors">
+                    <div className={`w-8 h-8 rounded-md ${svc.color} flex items-center justify-center text-sm`}>{svc.icon}</div>
                     <span className="text-slate-700 font-medium text-sm">{svc.label}</span>
                   </Link>
                 ))}
               </div>
-              <NavLink to="/contact" className="block px-3 py-2.5 rounded-xl text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Contact</NavLink>
+              <NavLink to="/contact" className="block px-3 py-2.5 rounded-lg text-slate-700 font-medium hover:bg-brand-50 hover:text-brand-700 transition-colors">Contact</NavLink>
               <div className="pt-3">
                 <Link to="/contact" className="btn-cta w-full justify-center" aria-label="Get free consultation">
                   Get Free Consultation →

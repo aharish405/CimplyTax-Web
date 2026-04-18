@@ -204,7 +204,7 @@ export default function IncorporationPage() {
             {/* Right: AI image */}
             <FadeLeft delay={0.2} className="hidden lg:block">
               <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(124 58 237 / 0.15), 0 8px 32px -4px rgb(0 0 0 / 0.10)' }}>
+                <div className="rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 12px 40px -8px rgb(124 58 237 / 0.12), 0 4px 16px -4px rgb(0 0 0 / 0.08)' }}>
                   <img
                     src="/images/incorporation-team.png"
                     alt="Young Indian startup team reviewing company registration documents in a Bengaluru co-working space"
@@ -216,8 +216,8 @@ export default function IncorporationPage() {
                 {/* Floating cert badge */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7, duration: 0.5 }}
-                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-slate-100 flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center text-2xl">🏢</div>
+                  className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-md border border-slate-200 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center text-xl">🏢</div>
                   <div>
                     <p className="font-extrabold text-slate-900">MCA Registered</p>
                     <p className="text-slate-500 text-xs">Govt. of India Authorized</p>
@@ -251,7 +251,7 @@ export default function IncorporationPage() {
                   <div className="flex gap-5 mb-1 relative">
                     {/* Step number + connector */}
                     <div className="flex flex-col items-center flex-shrink-0">
-                      <div className="w-14 h-14 rounded-2xl bg-white border-2 border-brand-100 flex items-center justify-center font-extrabold text-brand-600 text-lg shadow-sm z-10">
+                      <div className="w-12 h-12 rounded-lg bg-white border-2 border-brand-100 flex items-center justify-center font-extrabold text-brand-600 text-base shadow-sm z-10">
                         {step.n}
                       </div>
                       {i < steps.length - 1 && (
@@ -286,7 +286,7 @@ export default function IncorporationPage() {
                 <img
                   src="/images/incorporation-team.png"
                   alt="Startup team reviewing incorporation documents"
-                  className="w-full h-64 object-cover rounded-3xl mb-8 shadow-lg"
+                  className="w-full h-64 object-cover rounded-xl mb-8 shadow-md"
                   loading="lazy"
                 />
               </FadeLeft>
@@ -314,7 +314,7 @@ export default function IncorporationPage() {
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-card">
+            <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-card">
               <table className="w-full min-w-[680px] bg-white" role="table" aria-label="Business structure comparison table">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200">

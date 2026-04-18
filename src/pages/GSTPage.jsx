@@ -50,7 +50,7 @@ export default function GSTPage() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ boxShadow: '0 32px 80px -12px rgb(13 148 136 / 0.15)' }}>
+              <div className="rounded-xl overflow-hidden shadow-lg" style={{ boxShadow: '0 12px 40px -8px rgb(13 148 136 / 0.12)' }}>
                 <img src="/images/gst-office.png" alt="Indian professional filing GST compliance on laptop in modern office"
                   className="w-full h-[440px] object-cover" width={580} height={440} />
               </div>
